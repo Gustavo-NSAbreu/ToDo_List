@@ -28,7 +28,10 @@ function App() {
       <Header />
       <div className={styles.wrapper}>
         <TaskCreator onTaskCreation={handleTaskCreation} />
-        <TaskList tasks={tasks} onDeleteTask={handleDeleteTask} />
+        <TaskList
+          tasks={tasks}
+          onDeleteTask={handleDeleteTask}
+        />
       </div>
     </div>
   );

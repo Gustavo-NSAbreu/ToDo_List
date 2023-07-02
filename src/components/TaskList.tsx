@@ -16,17 +16,18 @@ export default function TaskList({ tasks, onDeleteTask }: TaskListProps) {
     ? `${completedTasks} de ${tasks.length}`
     : tasks.length;
 
-  const showTaskList = 
-    tasks.length 
-    ? tasks.map((task) => (
-        <Task
-          info={task.info}
-          onCompleteTask={handleCompleteTask}
-          onDeleteTask={onDeleteTask}
-          key={task.info}
-        />
-      ))
-    : <EmptyTaskList />;
+  const showTaskList = tasks.length ? (
+    tasks.map((task) => (
+      <Task
+        info={task.info}
+        onCompleteTask={handleCompleteTask}
+        onDeleteTask={onDeleteTask}
+        key={task.info}
+      />
+    ))
+  ) : (
+    <EmptyTaskList />
+  );
   return (
     <div className={styles.wrapper}>
       <header>
@@ -38,9 +39,7 @@ export default function TaskList({ tasks, onDeleteTask }: TaskListProps) {
         </div>
       </header>
 
-      <main>
-        {showTaskList}
-      </main>
+      <main>{showTaskList}</main>
     </div>
   );
 }

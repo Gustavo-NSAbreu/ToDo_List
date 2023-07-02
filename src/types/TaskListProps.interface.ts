@@ -1,5 +1,3 @@
-import { TaskProps } from "./TaskProps.interface";
-
 interface Task {
   info: string;
 }

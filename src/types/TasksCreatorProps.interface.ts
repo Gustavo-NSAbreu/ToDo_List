@@ -1,5 +1,5 @@
-import { TaskProps } from "./TaskProps.interface";
+import { TaskProps } from './TaskProps.interface';
 
-export interface TaskCreatorProps{
+export interface TaskCreatorProps {
   onTaskCreation: (newTask: TaskProps) => void;
 }
