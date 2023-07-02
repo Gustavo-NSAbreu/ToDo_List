@@ -1,0 +1,45 @@
+.wrarpper {
+  display: grid;
+  grid-template-rows: 1.1875rem 1fr;
+}
+
+.wrapper header {
+  display: grid;
+  margin-bottom: 1.5rem;
+  grid-template-columns: 50% 50%;
+  justify-content: space-between;
+}
+
+.wrapper header div {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  gap: 8px;
+}
+
+.wrapper header div:first-child {
+  color: var(--blue-400);
+}
+
+.wrapper header div:last-child {
+  color: var(--purple-400);
+  display: flex;
+  justify-content: end;
+}
+
+.wrapper span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+}
+
+.wrapper main div + div {
+  margin-top: 0.75rem;
+}
